@@ -5,8 +5,10 @@ var arr = [10,20,30,40,50,60]
 /*
   Create a variable named 'firstItem' and set it equal to the first value of the 'arr' array.
 */
-
 //Code Here
+console.log ("---Problem 1---");
+let firstItem = arr[0];
+console.log (firstItem);
 
 
 ////////// PROBLEM 2 //////////
@@ -15,7 +17,9 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
-
+console.log ("---Problem 2---");
+let lastItemRemoved = arr.pop();
+console.log (`last item removed was: ${lastItemRemoved}`);
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
@@ -27,6 +31,10 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
+console.log ("---Problem 3---");
+for (let i = 0; i < family.length; i++) {
+  console.log (family[i]);
+}
 
 
 
@@ -42,6 +50,14 @@ let evensArr = []
 */
 
 //Code Here
+console.log("---Problem 4---");
+for (let i = 1; i < nums.length; i++) {
+  if (nums[i] % 2 == 0) {
+  evensArr.push (nums [i]);
+  }
+}
+console.log (evensArr);
+
 
 
 
@@ -56,8 +72,20 @@ var score = 74
 */
 
 //Code Here
-
-
+let pb5Grade
+console.log ("---Problem 5---")
+if (score >= 90) {
+  pb5Grade = "A";
+} else if (score < 90 && score >= 80) {
+  pb5Grade = "B";
+} else if (score < 80 && score >= 70) {
+  pb5Grade = "C";
+} else if (score < 70 && score >= 60) {
+  pb5Grade = "D";
+} else {
+  pb5Grade = "F";
+}
+console.log (`Your Grade is: ${pb5Grade}`);
 ////////// Intermediate Problems //////////
 
 ////////// PROBLEM 6 //////////
@@ -71,6 +99,9 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
+console.log ("---Problem 6---")
+let someNum = myFavoriteNumbers[4];
+console.log (someNum)
 
 
 ////////// PROBLEM 7 //////////
@@ -79,8 +110,13 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 // Use an if statement to check the length of the 'myFavoriteNumbers' array. If it's less than 7, log 'There are not enough elements in this array' to the console. If the length is more than 7, reassign the value of 'someNum' to the value of the 7th element in the array. (Hint: how can you make sure that your code works for exactly 7 elements? What index do you use to get the 7th element?)
 
 //Code Here
-
-
+console.log ("---Problem 7---")
+if (myFavoriteNumbers.length < 7) {
+  console.log ("There are not enough elements in this array")
+} else {
+  myFavoriteNumbers.push (someNum)
+}
+console.log (myFavoriteNumbers)
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -90,6 +126,12 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
+console.log ("---Problem 8---")
+for (let i = 0; i < listOfNumbers.length; i++) {
+  if (listOfNumbers[i] % 3 == 0) {
+    console.log (`${listOfNumbers[i]} is divisible by 3!`);
+  }
+}
 
 
 ////////// PROBLEM 9 //////////
@@ -102,6 +144,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+console.log("---Problem 9---")
+for (let i = letters.length - 1; i > -1; i--) {
+  console.log (letters[i]);
+}
 
 
 ////////// Advanced Problems //////////
@@ -124,6 +170,29 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+console.log ("---Problem 10---")
+
+switch(letterGrade){
+  case "A":
+    console.log("The student is doing excellently");
+    break;
+  case "B":
+    console.log("The student is doing well");
+    break;
+  case "C":
+    console.log("The student is doing alright.");
+    break;
+  case "D":
+    console.log("The student is not doing very well.");
+    break;
+  case "F":
+    console.log("The student is failing");
+    break;
+  default:
+    console.log("I have no idea what kind of letter grade this is. are they okay?")
+    break;
+}
+
 
 
 
@@ -152,3 +221,17 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
+
+console.log ("---Problem 11---")
+
+for (let  i = 0; i < 100; i++) {
+  if (i % 15 == 0) {
+    console.log ("DevMountain!");
+  } else if (i % 3 == 0) {
+    console.log ("Dev")
+  } else if (i % 5 == 0) {
+    console.log ("Mountain")
+  } else {
+    console.log (i)
+  }
+}
